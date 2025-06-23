@@ -32,7 +32,7 @@
 
 ### Home Page  
 *Welcome screen introducing the dashboard.*  
-![Home Page](screenshots/home-page1.png)
+![Home Page](screenshots/home-page2.png)
 
 ### Add Trade Page  
 *Form to enter stock trade details.*  
