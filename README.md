@@ -146,4 +146,4 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ##  Author
 
 **Jacob Eluvathingal**  
-[LinkedIn](https://www.linkedin.com/in/jacob-eluvathingal-a062a6293/) • [GitHub](https://github.com/jacobalex-19)
+[LinkedIn](https://www.linkedin.com/in/jacob-eluvathingal-a062a6293/) • [GitHub](https://github.com/jacobeluvathingal)
