@@ -122,6 +122,10 @@ function App() {
                     {/* Fallback for any unmatched paths. Redirects to dashboard if logged in, otherwise to login. */}
                     <Route path="*" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} replace />} />
                 </Routes>
+
+                <footer className="trademark-section">
+                    <p>Stock Tracker 2025. All rights reserved.</p>
+                </footer>
             </div>
         </Router>
     );

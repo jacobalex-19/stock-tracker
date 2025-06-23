@@ -190,3 +190,14 @@ html, body, #root {
         font-size: 1rem;
     }
 }
+
+.trademark-section {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    padding: 1.5rem 1rem; /* Increased padding */
+    background-color: #161b22; /* Darker background than main app body */
+    color: #9ca3af; /* Muted text color */
+    text-align: center;
+    font-size: 1.3rem;
+    border-top: 1px solid #2d3748; 
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
