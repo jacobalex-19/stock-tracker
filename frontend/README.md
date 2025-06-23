@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+#  Stock Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Stock Tracker** is a full-stack web application that helps users manage and monitor their stock option trades. It allows users to log trades, track real-time stock prices via the Yahoo Finance API, and view metrics like total premium and profit/loss.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+##  Features
 
-### `npm start`
+- Add trades with:
+  - Stock name
+  - Strike price
+  - Option type (Call/Put)
+  - Premium
+  - Lot size
+  - Quantity
+  - Expiry date
+- Automatically calculates:
+  -  Total Premium = Lot × Quantity × Premium
+  -  Current Value (based on live stock price)
+  -  Profit or Loss at close
+- View trades filtered by expiry
+- Edit or delete trades
+- Displays summary of trades including:
+  - Total Premium Invested
+  - Current Value
+  - Net Profit/Loss
+- Responsive and user-friendly UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Screenshots
 
-### `npm test`
+### Home Page  
+*Welcome screen introducing the dashboard.*  
+![Home Page](screenshots/home-page.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Add Trade Page  
+*Form to enter stock trade details.*  
+![Add Trade](screenshots/add-trade.png)
 
-### `npm run build`
+### Trade Table  
+*Live trades with calculated metrics.*  
+![Trade Table](screenshots/trade-table.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### View Trades Page  
+*Detailed trade list with filters and actions.*  
+![View Trades](screenshots/view-trades.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
 
-### `npm run eject`
+### 🔹 Frontend
+- React
+- Axios
+- React Router DOM
+- CSS / Bootstrap
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔹 Backend
+- Node.js
+- Express.js
+- MySQL
+- Yahoo Finance API (`yahoo-finance2`)
+- CORS, dotenv
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##  Setup Instructions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This guide helps you set up the project locally.
 
-## Learn More
+###  Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js and npm
+- MySQL
+- Git
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+###  1. Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/jacobalex-19/stock-tracker.git
+cd stock-tracker
+```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+###  2. Backend Setup
 
-### Making a Progressive Web App
+```bash
+cd backend
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Create a `.env` file inside the `backend/` folder and add your MySQL credentials:
 
-### Advanced Configuration
+```env
+DB_HOST=localhost
+DB_USER=your_mysql_user
+DB_PASSWORD=your_mysql_password
+DB_NAME=stock_tracker
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Make sure the database and required table exist in MySQL. Then start the backend server:
 
-### Deployment
+```bash
+node server.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The backend runs at: `http://localhost:5000`
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###  3. Frontend Setup
+
+```bash
+cd ../frontend
+npm install
+npm start
+```
+
+The frontend will be live at: `http://localhost:3000`
+
+---
+
+##  Environment Variables
+
+You will need to configure the following in your `.env` file:
+
+```env
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=stock_tracker
+```
+
+---
+
+##  License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute this project with attribution.
+
+---
+
+##  Author
+
+**Jacob Eluvathingal**  
+[LinkedIn](https://www.linkedin.com/in/jacob-eluvathingal-a062a6293/) • [GitHub](https://github.com/jacobalex-19)
