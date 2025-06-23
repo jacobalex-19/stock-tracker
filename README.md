@@ -1,6 +1,6 @@
-#  Stock Tracker
+#  QuantDash
 
-**Stock Tracker** is a full-stack web application that helps users manage and monitor their stock option trades. It allows users to log trades, track real-time stock prices via the Yahoo Finance API, and view metrics like total premium and profit/loss.
+**QuantDash** is a full-stack web application that helps users manage and monitor their stock option trades. It allows users to log trades, track real-time stock prices via the Yahoo Finance API, and view metrics like total premium and profit/loss.
 
 ---
 
