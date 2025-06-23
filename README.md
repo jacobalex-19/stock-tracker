@@ -32,7 +32,7 @@
 
 ### Home Page  
 *Welcome screen introducing the dashboard.*  
-![Home Page](screenshots/home-page.png)
+![Home Page](screenshots/home-page1.png)
 
 ### Add Trade Page  
 *Form to enter stock trade details.*  
@@ -44,7 +44,7 @@
 
 ### Trade Table  
 *Live trades with calculated metrics.*  
-![Trade Table](screenshots/trade-table.png)
+![Trade Table](screenshots/trade-table1.png)
 
 ---
 
