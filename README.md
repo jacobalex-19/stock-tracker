@@ -38,13 +38,13 @@
 *Form to enter stock trade details.*  
 ![Add Trade](screenshots/add-trade.png)
 
-### Trade Table  
-*Live trades with calculated metrics.*  
-![Trade Table](screenshots/trade-table.png)
-
 ### View Trades Page  
 *Detailed trade list with filters and actions.*  
 ![View Trades](screenshots/view-trades.png)
+
+### Trade Table  
+*Live trades with calculated metrics.*  
+![Trade Table](screenshots/trade-table.png)
 
 ---
 
