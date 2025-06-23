@@ -85,7 +85,7 @@ function App() {
                     <Route path="/dashboard" element={
                         <ProtectedRoute isAuthenticated={isAuthenticated}>
                             <div className="container dashboard-content"> {/* Constrained container */}
-                                <h1>Welcome to Your Stock Trading Dashboard</h1>
+                                <h1>Welcome to QuantDash</h1>
                                 <p>Manage your options trades effortlessly. Add new positions, view existing ones, and track performance.</p>
                             </div>
                         </ProtectedRoute>
@@ -124,7 +124,7 @@ function App() {
                 </Routes>
 
                 <footer className="trademark-section">
-                    <p>Stock Tracker 2025. All rights reserved.</p>
+                    <p>@2025 QuantDash. All rights reserved.</p>
                 </footer>
             </div>
         </Router>
