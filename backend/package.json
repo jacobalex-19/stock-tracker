@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10",
+    "yahoo-finance2": "^2.13.3"
+  }
+}

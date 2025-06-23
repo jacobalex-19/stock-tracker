@@ -1,0 +1,295 @@
+/* src/ViewTrades.css */
+
+/* Main container for the ViewTrades page content */
+.view-trades-container {
+    padding: 1.5rem; /* Consistent padding around the content */
+    background-color: #1a202c; /* Matches body background for seamless look */
+    color: #e2e8f0; /* Default text color */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 2rem; /* Space below the component */
+    min-width: 0; /* Ensures content can shrink */
+}
+
+/* Header/Title */
+.view-trades-header {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #cfd8dc; /* Light color for header */
+}
+
+/* Search Controls */
+.search-controls {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Spacing between elements */
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #2d3748; /* Slightly lighter background for controls */
+    border-radius: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inner shadow */
+}
+
+.search-label {
+    font-weight: 600;
+    color: #cbd5e0;
+}
+
+.search-input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #4a5568;
+    border-radius: 0.375rem;
+    background-color: #2d3748;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+.search-button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.search-button.primary-button {
+    background-color: #3b82f6; /* Blue */
+    color: white;
+}
+.search-button.primary-button:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.search-button.secondary-button {
+    background-color: #4a5568; /* Gray */
+    color: white;
+}
+.search-button.secondary-button:hover {
+    background-color: #2d3748;
+    transform: translateY(-1px);
+}
+
+/* Status Message Box */
+.status-message-box {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #3a475a; /* Slightly lighter background */
+    border-radius: 0.375rem;
+    color: #e2e8f0;
+    font-style: italic;
+}
+
+
+/* Responsive Table Wrapper */
+.table-responsive-wrapper {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+    border: 1px solid #4a5568; /* Border for the table container */
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem; /* Space below the table */
+}
+
+/* Main Table Styling */
+.trades-data-table {
+    width: 100%; /* Make table take full width of its container */
+    border-collapse: collapse; /* Remove default table cell spacing */
+    min-width: 1400px; /* Set a minimum width to ensure all columns have space and force scrollbar */
+    /* Adjust this min-width value based on your actual content and column count */
+    background-color: #2d3748; /* Table background */
+}
+
+.table-header-group {
+    background-color: #1a1c20; /* Darker header background */
+    color: #cfd8dc; /* Header text color */
+}
+
+.table-header-row th {
+    padding: 0.8rem 1rem; /* Padding for header cells */
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.9rem; /* Slightly smaller font for headers */
+    text-transform: uppercase;
+    border-bottom: 1px solid #4a5568; /* Separator for header */
+    white-space: nowrap; /* Prevent headers from wrapping */
+}
+
+.trade-data-row td {
+    padding: 0.75rem 1rem; /* Padding for data cells */
+    border-bottom: 1px solid #4a5568; /* Separator for rows */
+    white-space: nowrap; /* Prevent data from wrapping, ensuring horizontal scroll */
+    font-size: 0.95rem; /* Slightly smaller font for data */
+}
+
+/* Alternating row colors for readability */
+.trades-data-table tbody tr:nth-child(odd) {
+    background-color: #2d3748; /* Odd rows */
+}
+.trades-data-table tbody tr:nth-child(even) {
+    background-color: #242c38; /* Even rows - slightly darker */
+}
+
+.trades-data-table tbody tr:hover {
+    background-color: #3a475a; /* Hover effect for rows */
+    transition: background-color 0.2s ease;
+}
+
+/* Specific cell styling for Stock Name and Current Price */
+.stock-name-cell {
+    font-weight: 600;
+    color: #90cdf4; /* Light blue for stock name */
+}
+
+.current-price-cell {
+    font-size: 0.8rem;
+    color: #63b3ed; /* Slightly darker blue for price */
+}
+
+/* Text color classes (matching previous Bootstrap-like colors) */
+.text-danger { color: #e53e3e; } /* Red */
+.text-warning { color: #f6ad55; } /* Orange */
+.text-success { color: #48bb78; } /* Green */
+.text-primary { color: #63b3ed; } /* Blue (for prices) */
+.text-muted { color: #a0aec0; } /* Muted gray */
+
+.bold-text { font-weight: 700; }
+.italic-text { font-style: italic; }
+
+/* Action Buttons within table cells */
+.actions-cell, .close-cell {
+    text-align: center;
+}
+
+.action-buttons-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.4rem; /* Space between buttons */
+    align-items: center;
+}
+
+.action-button {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    min-width: 70px; /* Ensure buttons have a minimum consistent width */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button {
+    background-color: #4299e1; /* Blue */
+    color: white;
+}
+.edit-button:hover {
+    background-color: #3182ce;
+    transform: translateY(-1px);
+}
+
+.delete-button {
+    background-color: #e53e3e; /* Red */
+    color: white;
+}
+.delete-button:hover {
+    background-color: #c53030;
+    transform: translateY(-1px);
+}
+
+.close-button {
+    background-color: #ed8936; /* Orange */
+    color: white;
+}
+.close-button:hover {
+    background-color: #dd6b20;
+    transform: translateY(-1px);
+}
+
+.closed-status-text {
+    color: #a0aec0; /* Muted color for closed status text */
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Subtotal and Grand Total Rows */
+.stock-subtotal-row, .grand-total-row {
+    background-color: #1a1c20 !important; /* Darker background for summary rows */
+    color: #e2e8f0; /* Lighter text */
+    font-weight: 700;
+    font-size: 1rem;
+    border-top: 2px solid #63b3ed; /* Blue separator */
+}
+
+.grand-total-row {
+    font-size: 1.1rem;
+    border-top: 3px solid #3b82f6; /* Thicker blue separator for grand total */
+}
+
+.subtotal-label, .grand-total-label {
+    text-align: right;
+    padding-right: 1.5rem; /* Add more padding to align with data */
+    color: #90cdf4; /* Highlighted label color */
+}
+
+.subtotal-value, .grand-total-value {
+    font-weight: 800; /* Extra bold for values */
+    color: #48bb78; /* Green for total values */
+}
+
+.subtotal-filler, .grand-total-filler {
+    background-color: transparent; /* Ensure fillers don't obscure lines */
+    border-bottom: none; /* No border for fillers */
+}
+
+.empty-spacer-row td {
+    height: 1.5rem; /* Adds visual space between stock groups */
+    background-color: transparent !important;
+    border-bottom: none;
+    padding: 0;
+}
+
+.no-trades-row td {
+    text-align: center;
+    font-style: italic;
+    color: #a0aec0;
+    padding: 1.5rem;
+}
+
+/* Responsive Adjustments for very small screens if needed */
+@media (max-width: 600px) {
+    .trades-data-table {
+        min-width: 1000px; /* Adjust minimum width for extremely small screens */
+    }
+    .trades-data-table th,
+    .trades-data-table td {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    .search-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-button {
+        width: 100%;
+    }
+    .search-label {
+        width: 100%;
+        text-align: center;
+    }
+}
