@@ -71,7 +71,7 @@ function LoginPage({ onLoginSuccess }) {
                         />
                     </div>
 
-                    {/* Login Button */}
+                    
                     <div className="button-group">
                         <button type="submit" className="login-button">
                             Log In
@@ -79,7 +79,7 @@ function LoginPage({ onLoginSuccess }) {
                     </div>
                 </form>
 
-                {/* Hint Text */}
+                
                 <p className="login-hint">
                     Hint: Username is `<span className="hint-highlight">admin@gmail.com</span>`, Password is `<span className="hint-highlight">password@123</span>`.
                 </p>
