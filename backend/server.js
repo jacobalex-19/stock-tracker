@@ -1,28 +1,29 @@
-require('dotenv').config(); // Loads environment variables from .env
+// index.js (Your Backend Server)
+
 const express = require('express');
-const mysql = require('mysql2'); // Use mysql2 for better support
+const mysql = require('mysql'); // Using 'mysql' for callback-based queries
 const cors = require('cors');
-const yahooFinance = require('yahoo-finance2').default;
+const yahooFinance = require('yahoo-finance2').default; // Yahoo Finance API client
 
 const app = express();
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); // Middleware to parse JSON request bodies
 
-// --- DATABASE CONNECTION (from Railway Environment Variables) ---
+// --- DATABASE CONNECTION ---
 const db = mysql.createConnection({
-    host: process.env.DB_HOST,      // e.g., containers-us-west-123.railway.app
-    user: process.env.DB_USER,      // e.g., root
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,  // e.g., railway
-    port: process.env.DB_PORT || 3306
+    host: "localhost",
+    user: "root",
+    password: "", // Or your actual MySQL root password
+    database: "stock_trading" // !! IMPORTANT: Make sure this is your actual database name
 });
 
 db.connect((err) => {
     if (err) {
-        console.error('❌ Error connecting to MySQL:', err);
+        console.error('Error connecting to the database:', err);
+        // It's good practice to exit the process if the DB connection fails at startup
         process.exit(1);
     }
-    console.log('✅ Connected to MySQL database');
+    console.log('Connected to MySQL database');
 });
 
 // --- API Routes ---
