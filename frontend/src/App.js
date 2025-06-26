@@ -112,14 +112,14 @@ function App() {
                         </ProtectedRoute>
                     } />
 
-                    {/* VIEW TRADES: THIS ROUTE IS NOW RENDERED DIRECTLY, ALLOWING FULL WIDTH */}
+                    
                     <Route path="/view" element={
                         <ProtectedRoute isAuthenticated={isAuthenticated}>
                             <ViewTrades />
                         </ProtectedRoute>
                     } />
 
-                    {/* Fallback for any unmatched paths. Redirects to dashboard if logged in, otherwise to login. */}
+                    
                     <Route path="*" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} replace />} />
                 </Routes>
 
