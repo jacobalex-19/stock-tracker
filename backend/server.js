@@ -11,10 +11,10 @@ app.use(express.json()); // Middleware to parse JSON request bodies
 
 // --- DATABASE CONNECTION ---
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "", // Or your actual MySQL root password
-    database: "stock_trading" // !! IMPORTANT: Make sure this is your actual database name
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 db.connect((err) => {
