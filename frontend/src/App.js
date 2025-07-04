@@ -124,7 +124,7 @@ function App() {
                 </Routes>
 
                 <footer className="trademark-section">
-                    <p>@2025 QuantDash. All rights reserved.</p>
+                    <p> @2025 QuantDash. All rights reserved. </p>
                 </footer>
             </div>
         </Router>
