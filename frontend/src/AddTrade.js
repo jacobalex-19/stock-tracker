@@ -169,7 +169,6 @@ function AddTrade() {
                                 name="Strike_Price"
                                 value={trade.Strike_Price}
                                 onChange={handleChange}
-                                placeholder="e.g., 1500, 350.50"
                                 required
                             />
                         </div>
@@ -183,7 +182,6 @@ function AddTrade() {
                                 name="Qty"
                                 value={trade.Qty}
                                 onChange={handleChange}
-                                placeholder="e.g., 1, 2, 5"
                                 required
                             />
                         </div>
@@ -198,7 +196,6 @@ function AddTrade() {
                                 name="Premium"
                                 value={trade.Premium}
                                 onChange={handleChange}
-                                placeholder="e.g., 10.50 (premium per share)"
                                 required
                             />
                         </div>
